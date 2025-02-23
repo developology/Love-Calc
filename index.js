@@ -27,26 +27,37 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         var bold1 = name1.toUpperCase();
         var bold2 = name2.toUpperCase();
-        var Calculate = Math.random();
-        Calculate = Calculate * 100;
-        Calculate = Math.ceil(Calculate) + 1;
 
-        if (Calculate < 20) {
-          alert(
-            `Love percentage between ${bold1} and ${bold2} is too low \n i.e ${Calculate}%`
-          );
-        } else if (Calculate < 50) {
-          alert(
-            `Love percentage between ${bold1} and ${bold2} is okishh, \n i.e ${Calculate}%`
-          );
-        } else if (Calculate < 80) {
-          alert(
-            `You might fall for each other ${bold1} and ${bold2}. \n Your Love is ${Calculate}%`
-          );
+        // Custom condition for specific names
+        if (
+          (name1.toLowerCase() === "sachin" || name1.toLowerCase() === "sam" || name1.toLowerCase() === "sachinanand") &&
+          name2.toLowerCase() === "riddhi" ||
+          (name2.toLowerCase() === "sachin" || name2.toLowerCase() === "sam" || name2.toLowerCase() === "sachinanand") &&
+          name1.toLowerCase() === "riddhi"
+        ) {
+          alert("Aap Mumbai aasake hai, you guys are the best couple!");
         } else {
-          alert(
-            `You are purely soulmates ${bold1} and ${bold2}! \n Your love is ${Calculate}%`
-          );
+          var Calculate = Math.random();
+          Calculate = Calculate * 100;
+          Calculate = Math.ceil(Calculate) + 1;
+
+          if (Calculate < 20) {
+            alert(
+              `Love percentage between ${bold1} and ${bold2} is too low \n i.e ${Calculate}%`
+            );
+          } else if (Calculate < 50) {
+            alert(
+              `Love percentage between ${bold1} and ${bold2} is okishh, \n i.e ${Calculate}%`
+            );
+          } else if (Calculate < 80) {
+            alert(
+              `You might fall for each other ${bold1} and ${bold2}. \n Your Love is ${Calculate}%`
+            );
+          } else {
+            alert(
+              `You are purely soulmates ${bold1} and ${bold2}! \n Your love is ${Calculate}%`
+            );
+          }
         }
       }
     } else {
